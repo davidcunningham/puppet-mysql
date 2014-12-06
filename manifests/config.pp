@@ -4,7 +4,7 @@
 #
 #   include mysql::config
 class mysql::config(
-  $port       = 13306
+  $port       = 3306
 ) {
   require boxen::config
 
