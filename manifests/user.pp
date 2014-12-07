@@ -25,7 +25,7 @@ define mysql::user($ensure = present,
     }
   } elsif $ensure == 'absent' {
     exec { "delete mysql user ${name}":
-      command => "mysql -uroot -p13306 --password='' -e 'drop user ${name}'",
+      command => "mysql -uroot -p3306 --password='' -e 'drop user ${name}'",
       require => Exec['wait-for-mysql']
     }
   }
